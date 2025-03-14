@@ -28,7 +28,7 @@ document.body.prepend(div1);
 const btn1 =  document.createElement('button');
 btn1.textContent = 'Turn On Player 2';
 div1.prepend(btn1);
-btn1.style.backgroundColor = 'red';
+btn1.style.backgroundColor = '#FF6347';
 btn1.style.color = 'white';
 btn1.style.padding = '10px';
 
@@ -36,7 +36,7 @@ btn1.style.padding = '10px';
 const btn =  document.createElement('button');
 btn.textContent = 'Turn On Player 1';
 div1.prepend(btn);
-btn.style.backgroundColor = 'blue';
+btn.style.backgroundColor = '#4682B4';
 btn.style.color = 'white';
 btn.style.padding = '10px';
 
@@ -46,11 +46,11 @@ btn1.addEventListener('click',()=>{
   if(!mind[1].thinking){
     mind[1].thinking = true;
     btn1.textContent = 'Turn Off Player 2';
-    btn1.style.backgroundColor = 'green'
+    btn1.style.backgroundColor = '#32CD32'; 
   }else{
     mind[1].thinking = false;
     btn1.textContent = 'Turn On Player 2';
-    btn1.style.backgroundColor = 'red'
+    btn1.style.backgroundColor = '#FF6347'; 
   }
 })
 
@@ -60,20 +60,20 @@ btn.addEventListener('click',(e)=>{
   if(!mind[0].thinking){
     mind[0].thinking = true;
     btn.textContent = 'Turn Off Player 1';
-    btn.style.backgroundColor = 'green'
+    btn.style.backgroundColor = '#32CD32';
   }else{
     mind[0].thinking = false;
     btn.textContent = 'Turn On Player 1';
-    btn.style.backgroundColor = 'blue'
+    btn.style.backgroundColor = '#4682B4'; 
   }
 })
 
 //Players Configuration
 const players = [{ 
-  color: 'red',
+  color: '#FF4500',
   pos: canvas.width/2 + (canvas.width/4)
 },{
-  color: 'blue',
+  color: '#1E90FF',
   pos: canvas.width/4
 }];
 
@@ -134,7 +134,7 @@ document.addEventListener('keydown',(e)=>{
       y: players[0].y -5,
       speed: -game.bulletSpeed,
       size: 10,
-      color: 'pink'
+      color: '#FFC0CB'
     })
   }
 
@@ -145,7 +145,7 @@ document.addEventListener('keydown',(e)=>{
       y: players[1].y -5,
       speed: game.bulletSpeed,
       size: 10,
-      color: 'lightblue'
+      color: '#ADD8E6'
     })
   }
 
